@@ -1,3 +1,4 @@
+Сабака 🖋️, [8/1/2026 8:31 PM]
 import streamlit as st
 import pandas as pd
 
@@ -43,11 +44,11 @@ def show_login():
         
         c1, c2, c3 = st.columns([1, 2, 1])
         with c2:
-            username = st.text_input("👤 اسم المستخدم", placeholder="أدخل اسم المستخدم", key="username")
-            password = st.text_input("🔒 كلمة المرور", placeholder="أدخل كلمة المرور", type="password", key="password")
+            # قمنا بتغيير الـ Key هنا لتجنب أي تداخل قديم
+            username = st.text_input("👤 اسم المستخدم", placeholder="أدخل اسم المستخدم", key="login_username")
+            password = st.text_input("🔒 كلمة المرور", placeholder="أدخل كلمة المرور", type="password", key="login_password")
             
             if st.button("تسجيل الدخول ➡", use_container_width=True):
-                # قمنا بوضع اسم مستخدم وكلمة مرور ثابتة للنسخة التجريبية على الإنترنت
                 if username == "admin" and password == "1234":
                     st.session_state['logged_in'] = True
                     st.session_state['current_page'] = 'dashboard'
@@ -95,43 +96,50 @@ def show_emp_info():
     if st.button("⬅ عودة للوحة التحكم"):
         st.session_state['current_page'] = 'dashboard'
         st.rerun()
+        
+    st.
 
-st.title("معلومات الموظفين (Emp_info)")
-st.write("---")
-c1, c2, c3 = st.columns(3)
-with c3:
+Сабака 🖋️, [8/1/2026 8:31 PM]
+title("معلومات الموظفين (Emp_info)")
+    st.write("---")
+    
+    c1, c2, c3 = st.columns(3)
+    with c3:
         st.selectbox("الجنس", ["اختر الجنس", "ذكر", "أنثى"])
-with c2:
+    with c2:
         st.date_input("تاريخ الميلاد")
-with c1:
+    with c1:
         st.text_input("الرقم الوطني", placeholder="أدخل الرقم الوطني")
-c4, c5, c6 = st.columns(3)
-with c6:
+        
+    c4, c5, c6 = st.columns(3)
+    with c6:
         st.text_input("العنوان", placeholder="أدخل العنوان")
-with c5:
+    with c5:
         st.text_input("رقم الهاتف", placeholder="أدخل رقم الهاتف")
-with c4:
+    with c4:
         st.text_input("البريد الإلكتروني", placeholder="أدخل البريد الإلكتروني")
         
-st.date_input("تاريخ التوظيف *")
-st.write("")
-b1, b2, b3, b4, b5, b6 = st.columns(6)
-with b6: st.button("➕ إضافة", use_container_width=True)
-with b5: st.button("📝 تعديل", use_container_width=True)
-with b4: st.button("🗑 حذف", use_container_width=True)
-with b3: st.button("🔍 بحث", use_container_width=True)
-with b2: st.button("🖨 طباعة", use_container_width=True)
-with b1: st.button("📊 تصدير Excel", use_container_width=True)
+    st.date_input("تاريخ التوظيف *")
     
-st.write("---")
-dummy_data = {
+    st.write("")
+    b1, b2, b3, b4, b5, b6 = st.columns(6)
+    with b6: st.button("➕ إضافة", use_container_width=True)
+    with b5: st.button("📝 تعديل", use_container_width=True)
+    with b4: st.button("🗑 حذف", use_container_width=True)
+    with b3: st.button("🔍 بحث", use_container_width=True)
+    with b2: st.button("🖨 طباعة", use_container_width=True)
+    with b1: st.button("📊 تصدير Excel", use_container_width=True)
+    
+    st.write("---")
+    
+    dummy_data = {
         "الرقم الوظيفي": [101, 102, 103],
         "الاسم": ["أحمد سعيد", "سارة محمد", "خالد عبدالله"],
         "القسم": ["تقنية المعلومات", "الموارد البشرية", "التسويق"],
         "الراتب": [5500, 4800, 6200]
     }
-df_hr = pd.DataFrame(dummy_data)
-st.dataframe(df_hr, use_container_width=True)
+    df_hr = pd.DataFrame(dummy_data)
+    st.dataframe(df_hr, use_container_width=True)
 
 def show_placeholder(title):
     if st.button("⬅ عودة للوحة التحكم"):
@@ -157,29 +165,3 @@ else:
         show_placeholder("التقارير (Reports)")
     elif st.session_state['current_page'] == 'account_req':
         show_placeholder("طلبات الحسابات (Account_Requests)")
-# --- التحكم الرئيسي بتسجيل الدخول والصفحات ---
-if not st.session_state['logged_in']:
-    show_login()
-else:
-    # قائمة التنقل العلوية أو الجانبية المتاحة فقط بعد تسجيل الدخول
-    st.sidebar.title("قائمة النظام")
-    page_choice = st.sidebar.radio("الانتقال إلى:", ["لوحة التحكم", "معلومات الموظفين"])
-    
-    if page_choice == "لوحة التحكم":
-        if st.session_state['current_page'] == 'dashboard':
-            show_dashboard()
-        elif st.session_state['current_page'] == 'emp_salary':
-            show_placeholder("صفحة الرواتب (Emp_Salary)")
-        elif st.session_state['current_page'] == 'emp_vacation':
-            show_placeholder("صفحة الإجازات (Emp_Vacation)")
-        elif st.session_state['current_page'] == 'punch_in_out':
-            show_placeholder("صفحة البصمة (Punch_In_Out)")
-        elif st.session_state['current_page'] == 'reports':
-            show_placeholder("التقارير (Reports)")
-        elif st.session_state['current_page'] == 'account_req':
-            show_placeholder("طلبات الحسابات (Account_Requests)")
-        else:
-            show_dashboard()
-        
-    elif page_choice == "معلومات الموظفين":
-        show_emp_info()
