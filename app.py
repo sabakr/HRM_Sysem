@@ -95,8 +95,7 @@ def show_emp_info():
     if st.button("⬅ عودة للوحة التحكم"):
         st.session_state['current_page'] = 'dashboard'
         st.rerun()
-        
-    st.
+st.
 title("معلومات الموظفين (Emp_info)")
     st.write("---")
     
