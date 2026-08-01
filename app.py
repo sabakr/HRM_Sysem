@@ -120,8 +120,8 @@ with b4: st.button("🗑 حذف", use_container_width=True)
 with b3: st.button("🔍 بحث", use_container_width=True)
 with b2: st.button("🖨 طباعة", use_container_width=True)
 with b1: st.button("📊 تصدير Excel", use_container_width=True)
-    
- st.write("---")
+
+st.write("---")
 dummy_data = {
         "الرقم الوظيفي": [101, 102, 103],
         "الاسم": ["أحمد سعيد", "سارة محمد", "خالد عبدالله"],
