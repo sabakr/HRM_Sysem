@@ -106,12 +106,12 @@ with c2:
 with c1:
         st.text_input("الرقم الوطني", placeholder="أدخل الرقم الوطني")
         
-    c4, c5, c6 = st.columns(3)
-    with c6:
+ c4, c5, c6 = st.columns(3)
+with c6:
         st.text_input("العنوان", placeholder="أدخل العنوان")
-    with c5:
+with c5:
         st.text_input("رقم الهاتف", placeholder="أدخل رقم الهاتف")
-    with c4:
+with c4:
         st.text_input("البريد الإلكتروني", placeholder="أدخل البريد الإلكتروني")
         
     st.date_input("تاريخ التوظيف *")
