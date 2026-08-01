@@ -115,7 +115,7 @@ with c4:
         
 st.date_input("تاريخ التوظيف *")
 st.write("")
-    b1, b2, b3, b4, b5, b6 = st.columns(6)
+ b1, b2, b3, b4, b5, b6 = st.columns(6)
     with b6: st.button("➕ إضافة", use_container_width=True)
     with b5: st.button("📝 تعديل", use_container_width=True)
     with b4: st.button("🗑 حذف", use_container_width=True)
@@ -123,7 +123,7 @@ st.write("")
     with b2: st.button("🖨 طباعة", use_container_width=True)
     with b1: st.button("📊 تصدير Excel", use_container_width=True)
     
-    st.write("---")
+st.write("---")
     
     # بيانات تجريبية لعرضها في الجدول بدلاً من قاعدة بيانات اللابتوب
     dummy_data = {
