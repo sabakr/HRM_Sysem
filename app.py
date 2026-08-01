@@ -131,7 +131,7 @@ dummy_data = {
         "الراتب": [5500, 4800, 6200]
     }
 df_hr = pd.DataFrame(dummy_data)
-    st.dataframe(df_hr, use_container_width=True)
+st.dataframe(df_hr, use_container_width=True)
 
 def show_placeholder(title):
     if st.button("⬅ عودة للوحة التحكم"):
