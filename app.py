@@ -95,12 +95,10 @@ def show_emp_info():
     if st.button("⬅ عودة للوحة التحكم"):
         st.session_state['current_page'] = 'dashboard'
         st.rerun()
-st.
-title("معلومات الموظفين (Emp_info)")
-    st.write("---")
-    
-    c1, c2, c3 = st.columns(3)
-    with c3:
+st.title("معلومات الموظفين (Emp_info)")
+st.write("---")
+ c1, c2, c3 = st.columns(3)
+ with c3:
         st.selectbox("الجنس", ["اختر الجنس", "ذكر", "أنثى"])
     with c2:
         st.date_input("تاريخ الميلاد")
