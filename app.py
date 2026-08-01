@@ -157,3 +157,29 @@ else:
         show_placeholder("التقارير (Reports)")
     elif st.session_state['current_page'] == 'account_req':
         show_placeholder("طلبات الحسابات (Account_Requests)")
+# --- التحكم الرئيسي بتسجيل الدخول والصفحات ---
+if not st.session_state['logged_in']:
+    show_login()
+else:
+    # قائمة التنقل العلوية أو الجانبية المتاحة فقط بعد تسجيل الدخول
+    st.sidebar.title("قائمة النظام")
+    page_choice = st.sidebar.radio("الانتقال إلى:", ["لوحة التحكم", "معلومات الموظفين"])
+    
+    if page_choice == "لوحة التحكم":
+        if st.session_state['current_page'] == 'dashboard':
+            show_dashboard()
+        elif st.session_state['current_page'] == 'emp_salary':
+            show_placeholder("صفحة الرواتب (Emp_Salary)")
+        elif st.session_state['current_page'] == 'emp_vacation':
+            show_placeholder("صفحة الإجازات (Emp_Vacation)")
+        elif st.session_state['current_page'] == 'punch_in_out':
+            show_placeholder("صفحة البصمة (Punch_In_Out)")
+        elif st.session_state['current_page'] == 'reports':
+            show_placeholder("التقارير (Reports)")
+        elif st.session_state['current_page'] == 'account_req':
+            show_placeholder("طلبات الحسابات (Account_Requests)")
+        else:
+            show_dashboard()
+            
+    elif page_choice == "معلومات الموظفين":
+        show_emp_info()
