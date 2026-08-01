@@ -113,7 +113,7 @@ with c5:
 with c4:
         st.text_input("البريد الإلكتروني", placeholder="أدخل البريد الإلكتروني")
         
-    st.date_input("تاريخ التوظيف *")
+st.date_input("تاريخ التوظيف *")
     
     st.write("")
     b1, b2, b3, b4, b5, b6 = st.columns(6)
