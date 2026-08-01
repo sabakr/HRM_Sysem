@@ -99,11 +99,11 @@ def show_emp_info():
 st.title("معلومات الموظفين (Emp_info)")
 st.write("---")
 c1, c2, c3 = st.columns(3)
-    with c3:
+with c3:
         st.selectbox("الجنس", ["اختر الجنس", "ذكر", "أنثى"])
-    with c2:
+with c2:
         st.date_input("تاريخ الميلاد")
-    with c1:
+with c1:
         st.text_input("الرقم الوطني", placeholder="أدخل الرقم الوطني")
         
     c4, c5, c6 = st.columns(3)
