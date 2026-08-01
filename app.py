@@ -97,7 +97,7 @@ def show_emp_info():
         st.rerun()
 
 st.title("معلومات الموظفين (Emp_info)")
-    st.write("---")
+st.write("---")
     
     c1, c2, c3 = st.columns(3)
     with c3:
