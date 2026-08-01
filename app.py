@@ -1,4 +1,3 @@
-﻿ลม ✨, [8/1/2026 1:54 PM]
 import streamlit as st
 import pandas as pd
 
@@ -97,7 +96,6 @@ def show_emp_info():
         st.session_state['current_page'] = 'dashboard'
         st.rerun()
 
-ลม ✨, [8/1/2026 1:54 PM]
 st.title("معلومات الموظفين (Emp_info)")
     st.write("---")
     
