@@ -121,15 +121,14 @@ with b3: st.button("🔍 بحث", use_container_width=True)
 with b2: st.button("🖨 طباعة", use_container_width=True)
 with b1: st.button("📊 تصدير Excel", use_container_width=True)
     
-    st.write("---")
-    
-    dummy_data = {
+ st.write("---")
+dummy_data = {
         "الرقم الوظيفي": [101, 102, 103],
         "الاسم": ["أحمد سعيد", "سارة محمد", "خالد عبدالله"],
         "القسم": ["تقنية المعلومات", "الموارد البشرية", "التسويق"],
         "الراتب": [5500, 4800, 6200]
     }
-    df_hr = pd.DataFrame(dummy_data)
+ df_hr = pd.DataFrame(dummy_data)
     st.dataframe(df_hr, use_container_width=True)
 
 def show_placeholder(title):
