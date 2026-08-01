@@ -1,4 +1,3 @@
-Сабака 🖋️, [8/1/2026 8:31 PM]
 import streamlit as st
 import pandas as pd
 
