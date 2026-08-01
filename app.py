@@ -97,8 +97,6 @@ def show_emp_info():
         st.rerun()
         
     st.
-
-Сабака 🖋️, [8/1/2026 8:31 PM]
 title("معلومات الموظفين (Emp_info)")
     st.write("---")
     
