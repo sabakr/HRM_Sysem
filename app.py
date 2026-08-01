@@ -98,8 +98,7 @@ def show_emp_info():
 
 st.title("معلومات الموظفين (Emp_info)")
 st.write("---")
-    
-    c1, c2, c3 = st.columns(3)
+     c1, c2, c3 = st.columns(3)
     with c3:
         st.selectbox("الجنس", ["اختر الجنس", "ذكر", "أنثى"])
     with c2:
