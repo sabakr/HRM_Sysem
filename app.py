@@ -116,12 +116,12 @@ with c4:
 st.date_input("تاريخ التوظيف *")
 st.write("")
 b1, b2, b3, b4, b5, b6 = st.columns(6)
-    with b6: st.button("➕ إضافة", use_container_width=True)
-    with b5: st.button("📝 تعديل", use_container_width=True)
-    with b4: st.button("🗑 حذف", use_container_width=True)
-    with b3: st.button("🔍 بحث", use_container_width=True)
-    with b2: st.button("🖨 طباعة", use_container_width=True)
-    with b1: st.button("📊 تصدير Excel", use_container_width=True)
+with b6: st.button("➕ إضافة", use_container_width=True)
+with b5: st.button("📝 تعديل", use_container_width=True)
+with b4: st.button("🗑 حذف", use_container_width=True)
+with b3: st.button("🔍 بحث", use_container_width=True)
+with b2: st.button("🖨 طباعة", use_container_width=True)
+with b1: st.button("📊 تصدير Excel", use_container_width=True)
     
 st.write("---")
     
