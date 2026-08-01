@@ -111,7 +111,7 @@ with c5:
         st.text_input("رقم الهاتف", placeholder="أدخل رقم الهاتف")
 with c4:
         st.text_input("البريد الإلكتروني", placeholder="أدخل البريد الإلكتروني")
-         st.date_input("تاريخ التوظيف *")
+        st.date_input("تاريخ التوظيف *")
 st.write("")
     b1, b2, b3, b4, b5, b6 = st.columns(6)
     with b6: st.button("➕ إضافة", use_container_width=True)
