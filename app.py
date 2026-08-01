@@ -104,7 +104,7 @@ with c2:
         st.date_input("تاريخ الميلاد")
 with c1:
         st.text_input("الرقم الوطني", placeholder="أدخل الرقم الوطني")
- c4, c5, c6 = st.columns(3)
+c4, c5, c6 = st.columns(3)
 with c6:
         st.text_input("العنوان", placeholder="أدخل العنوان")
 with c5:
