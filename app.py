@@ -180,6 +180,6 @@ else:
             show_placeholder("طلبات الحسابات (Account_Requests)")
         else:
             show_dashboard()
-            
+        
     elif page_choice == "معلومات الموظفين":
         show_emp_info()
